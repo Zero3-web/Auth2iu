@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Links Personalizados</title>
+    <link rel="stylesheet" href="generador.css">
+</head>
+<body>
+    <div class="gen-container">
+        <h1>Generador de Links Personalizados</h1>
+        <form id="link-form">
+            <label for="frase">Frase principal:</label>
+            <input type="text" id="frase" name="frase" maxlength="120" required placeholder="Ej: ¿Me compras un pollo?">
+
+            <label for="mensaje_si">Mensaje al decir Sí:</label>
+            <input type="text" id="mensaje_si" name="mensaje_si" maxlength="120" required placeholder="Ej: ¡Sabía que dirías que sí!">
+
+            <label for="texto_si">Texto del botón SÍ:</label>
+            <input type="text" id="texto_si" name="texto_si" maxlength="40" required placeholder="Ej: Cristiano">
+
+            <label for="texto_no">Texto del botón NO:</label>
+            <input type="text" id="texto_no" name="texto_no" maxlength="40" required placeholder="Ej: Messi">
+
+            <button type="submit">Generar Link</button>
+        </form>
+        <div id="resultado" class="resultado" style="display:none;">
+            <label>Tu link personalizado:</label>
+            <input type="text" id="link-generado" readonly>
+            <button id="copiar-btn">Copiar</button>
+            <span id="copiado" style="display:none;">¡Copiado!</span>
+            <div id="acortador-area" style="margin-top:18px; display:none;">
+                <label>Link acortado:</label>
+                <input type="text" id="link-acortado" readonly>
+                <button id="copiar-acortado-btn">Copiar</button>
+                <span id="copiado-acortado" style="display:none;">¡Copiado!</span>
+            </div>
+        </div>
+    </div>
+    <script src="generador.js"></script>
+</body>
+</html>
